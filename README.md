@@ -1,190 +1,108 @@
-# CodeAlpha_Task
-# Task 4 — Web Server in Docker 🐳
+# CodeAlpha Internship — DevOps Projects 🚀
 
-> **Internship:** CodeAlpha · DevOps Domain
-> **Status:** ✅ COMPLETED
-> **Submitted by:** Muhammad Islah Uddin
-
----
-
-## 📌 Table of Contents
-- [Objective](#-objective)
-- [What Is Docker](#-what-is-docker)
-- [Technologies Used](#-technologies-used)
-- [Project Structure](#-project-structure)
-- [Dockerfile Explained](#-dockerfile-explained)
-- [Setup & Deployment](#-setup--deployment)
-- [Troubleshooting](#-troubleshooting)
-- [Commands Reference](#-commands-reference)
-- [Key Concepts Learned](#-key-concepts-learned)
+> **Internship Domain:** DevOps & Cloud Computing
+> **Intern:** Muhammad Islah Uddin
+> **Status:** ✅ 2/2 Tasks Completed
 
 ---
 
-## 🎯 Objective
-Build a custom Docker image that packages an Nginx web server with a custom HTML page. Run the container and access the website through your browser.
+## 📋 Project Overview
+This repository contains all DevOps tasks completed during the CodeAlpha Internship Program. Each task focuses on real-world industry practices — build automation, containerization, and software deployment.
 
 ---
 
-## 🤔 What Is Docker?
-Docker packages software into **containers** — everything the app needs (code, server, settings) is included. It runs exactly the same on every computer — "It works on my machine" becomes "It works everywhere".
+## ✅ Completed Tasks
 
----
-
-## 🛠️ Technologies Used
-| Tool | Purpose |
+### 1. Task 3 — Java Application Using Gradle
+| Detail | Information |
 |---|---|
-| **Docker** | Container platform |
-| **Nginx** | High-performance web server |
-| **HTML** | Web page content |
-| **Git** | Code sharing & version control |
+| **Objective** | Build and run a Java application using Gradle build automation tool |
+| **Tools** | Java 25, Gradle, Git |
+| **Key Skills** | Build automation, dependency management, project structure |
+| **Status** | ✅ COMPLETED |
+| **Folder** | [`TASK3—Java_Application_Using_Gradle/`](./TASK3—Java_Application_Using_Gradle/) |
+
+**Highlights:**
+- Standard source directory structure followed
+- Application plugin configured for easy execution
+- Runnable JAR file generated for standalone deployment
+- Clean build cycle: `clean` → `build` → `run` → `jar`
 
 ---
 
-## 📁 Project Structure
+### 2. Task 4 — Web Server in Docker
+| Detail | Information |
+|---|---|
+| **Objective** | Create a custom Docker image to run an Nginx web server with custom content |
+| **Tools** | Docker, Nginx, HTML |
+| **Key Skills** | Containerization, Dockerfile creation, port mapping, image management |
+| **Status** | ✅ COMPLETED |
+| **Folder** | [`Task4-WebServerinDocker/`](./Task4-WebServerinDocker/) |
 
+**Highlights:**
+- Custom Docker image built from official Nginx base image
+- Custom HTML page served on container startup
+- Container runs on port `8081` locally
+- Fully portable — same behavior on any machine
 
-Task4-WebServerinDocker/
+---
+
+## 🛠️ Environment Details
+| Tool | Version |
+|---|---|
+| Operating System | Ubuntu (Linux) |
+| Java | OpenJDK 25 |
+| Gradle | Latest |
+| Docker | Latest |
+| Git | Latest |
+
+---
+
+## 📁 Repository Structure
+CodeAlpha_Task/
+├── README.md
+├── TASK3—Java_Application_Using_Gradle/
+│   ├── README.md
+│   ├── build.gradle
+│   └── src/
+│       └── main/
+│           └── java/
+│               └── HelloCodeAlpha.java
+└── Task4-WebServerinDocker/
 ├── README.md
 ├── Dockerfile
-└── index.html
-plaintext
-
+└── index.htmlplaintext
 ---
 
-## 📝 Files Content
+## 🚀 Quick Start Guide
 
-### Dockerfile
-```dockerfile
-FROM nginx:latest
-WORKDIR /usr/share/nginx/html
-COPY index.html .
-EXPOSE 80
-index.html
-html
-Preview
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeAlpha — Docker Web Server</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(135deg, #007bff, #00d4aa);
-            color: white;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-        }
-        h1 { font-size: 2.5em; margin-bottom: 10px; }
-        .status { color: #90EE90; font-weight: bold; font-size: 1.2em; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>🚀 Welcome to CodeAlpha Intern!</h1>
-        <p style="font-size: 1.3em;">Docker Web Server Successfully Deployed</p>
-        <p class="status">✅ CONTAINER RUNNING</p>
-        <p><strong>Intern:</strong> Muhammad Islah Uddin</p>
-        <p><strong>Task:</strong> Web Server in Docker</p>
-        <p><strong>Tech:</strong> Nginx + Docker</p>
-    </div>
-</body>
-</html>
+### Clone This Repository
+```bash
 
-🚀 Step-by-Step Deployment
-Step 1 — Check Docker
-bash
-docker --version
-Step 2 — Go to Project Folder
-bash
-cd Task4-WebServerinDocker
-Step 3 — Build Image
-bash
+git clone https://github.com/MuhammadIslahUddin/CodeAlpha_Task.git
+
+cd CodeAlpha_Task
+
+Run Task 3 — Java + Gradlebashcd TASK3—Java_Application_Using_Gradle
+
+gradle build
+
+gradle run
+
+Run Task 4 — Docker Web Serverbashcd Task4-WebServerinDocker
+
 docker build -t my-custom-website .
-Step 4 — See Your Image
-bash
-docker images
-Step 5 — Clean Old Containers
-bash
-docker rm -f my-final-web 2>/dev/null || true
-Step 6 — Run Your Website
-bash
+
 docker run -d -p 8081:80 --name my-final-web my-custom-website
-Step 7 — Check It's Running
-bash
-docker ps
-Step 8 — Open in Browser
-plaintext
-http://localhost:8081
-⌨️ Commands Reference
 
-Table
-Command	What It Does
-docker build -t name .	Build image from Dockerfile
-docker images	List all saved images
-docker ps	Show running containers
-docker ps -a	Show all containers
-docker stop name	Stop a running container
-docker start name	Start a stopped container
-docker rm -f name	Force delete a container
-docker rmi name	Delete an image
-docker logs name	See container output
+Then visit: http://localhost:8081🎓 Learning Outcomes
 
-🔧 Troubleshooting
-
-❌ "Container name already in use"
-bash
-docker rm -f my-final-web
-Then run your container again.
-
-❌ "Port already in use"
-
-Use different port:
-bash
-docker run -d -p 8082:80 --name my-final-web my-custom-website
-Then open http://localhost:8082
+✅ Understand build automation and project lifecycles
+✅ Master containerization concepts with Docker
+✅ Write maintainable, professional documentation
+✅ Version control workflow with Git & GitHub
+✅ Deploy services locally and verify functionality
+© 2026 Muhammad Islah Uddin
 
 
-❌ Website not loading
-
-Check: docker ps → see if your container is there
-Restart: docker restart my-final-web
-Rebuild: docker build -t my-custom-website . then run again
-
-💡 Key Concepts Learned
-Table
-Concept	Explanation
-Image vs Container	Image = blueprint; Container = running instance
-Port Mapping	-p 8081:80 connects your computer to the container
-Isolation	Container has its own system — clean and safe
-Consistency	Runs the same on every machine
-Lightweight	Starts in seconds, uses very little memory
-
-✅ Verification Checklist
-
- Dockerfile created correctly
-
- Custom HTML page designed
-
- docker build succeeds
-
- Container runs in background
-
- Website opens at localhost:8081
-
- Code pushed to GitHub
-
- Documentation complete
-
-Task Completed: ✅ September 2026
-
-Submitted By: Muhammad Islah Uddin
+Completed as part of CodeAlpha Internship Program
