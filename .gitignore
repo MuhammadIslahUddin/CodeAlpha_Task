@@ -1,0 +1,8 @@
+# Gradle
+.gradle/
+build/
+*.jar
+
+# OS files
+.DS_Store
+Thumbs.db
