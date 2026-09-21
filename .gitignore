@@ -1,0 +1,8 @@
+# Gradle ke temp files — yeh upload nahi honge
+.gradle/
+build/
+*.jar
+
+# Computer ke extra files
+.DS_Store
+Thumbs.db
