@@ -1,0 +1,21 @@
+name: Deploy Portfolio
+
+# Auto-run when you push to main
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Task1-Azure-CICD/index.html'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ✅ Get latest code
+        uses: actions/checkout@v4
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Task1-Azure-CICD
