@@ -1,0 +1,22 @@
+Started by user [8mha:////4JnV0yC3FI6gCoXgSKF9NNK8PvGjTpgAecHpc/F5XzREAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mM Islah uddin
+Running as SYSTEM
+Building remotely on [8mha:////4IDHjgmZWuIAQ7Ok5rILfwTIM8I2Bak1gVZUPjy9vkNPAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgZh/eT83ILSktQi/cT01LwSXQNDfQAXbYlSyAAAAA==[0magent-01 (agent linux docker) in workspace /home/islah/CodeAlpha_Task/Task2-Jenkins-Remoting/jenkins-work/workspace/Test-Agent
+[Test-Agent] $ /bin/sh -xe /tmp/jenkins2015073819849788686.sh
++ echo ======================================
+======================================
++ echo ✅ SUCCESS! Job running on AGENT-01
+✅ SUCCESS! Job running on AGENT-01
++ echo ======================================
+======================================
++ hostname
++ echo Node name: islah-Latitude-E7440
+Node name: islah-Latitude-E7440
++ pwd
++ echo Working directory: /home/islah/CodeAlpha_Task/Task2-Jenkins-Remoting/jenkins-work/workspace/Test-Agent
+Working directory: /home/islah/CodeAlpha_Task/Task2-Jenkins-Remoting/jenkins-work/workspace/Test-Agent
++ date
++ echo Current time: Thu Sep 24 01:42:14 AM PKT 2026
+Current time: Thu Sep 24 01:42:14 AM PKT 2026
++ echo ======================================
+======================================
+Finished: SUCCESS
